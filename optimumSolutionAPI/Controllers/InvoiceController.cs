@@ -63,7 +63,7 @@ namespace optimumSolutionAPI.Controllers
                 return StatusCode(500, $"An error occurred: {ex.Message}");
             }
         }
-        [HttpPost("CreateCustomer")]
+        [HttpPost("Customer")]
         public async Task<IActionResult> CreateCustomer([FromBody] customerDTO customer)
         {
             try
@@ -95,7 +95,7 @@ namespace optimumSolutionAPI.Controllers
             }
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("Customer/{id}")]
         public async Task<IActionResult> RemoveCustomer(int id)
         {
             try
